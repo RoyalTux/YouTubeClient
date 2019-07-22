@@ -1,27 +1,13 @@
-# YouTubeClient
+# API-client
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.3.
+Так как мы закончили основную часть курса по Angular, задание для закрепления пройденного материала.
 
-## Development server
+1. Взять за основу какой-нибудь публичный API (Youtube, GitHub, VK, Facebook, или любой другой). Для конфигурации понадобится создание приложения и генерация токена. URL для обращения к API и сам токен предоставить через Interceptor
+2. Создать одну или несколько страниц со списком айтемов в зависимости от выбранного вами API (видео, посты, репозитории и другое). Должна быть навигация через Routing.
+3. Реализовать поиск по айтемам, используя кастомный Pipe. Также Pipe может вам понадобиться для форматировании дат (встроенный DatePipe)
+4. Чтобы реализовать задержку между поисками используйте Subject (выбрать наиболее подходящий) и оператор debounceTime для debounce поля ввода. Для более продвинутого решения можно создать для этих целей директиву.
+5. Создать директиву, которая в зависимости от даты создания айтема будет применять к нему определенные стили, например, для айтемов, которые были созданы 14 дней назад или раньше, сделать обводку синим цветом. помогут такие зависимости, как ElementRef и Renderer2.
+6. Создать страничку с подробным описанием конкретного айтема. Для этого нужно передать и обработать параметр в виде itemId. Для перезагрузки данных перед открытием странички можно использовать Resolver (https://alligator.io/angular/route-resolvers/).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+В качестве примера реализации, который покрывает все пункты из задания, вы можете ознакомиться с моим недавним примером:
+https://github.com/pavelrazuvalau/angular-lectures/tree/master/angular-http

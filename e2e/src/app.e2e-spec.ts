@@ -10,7 +10,7 @@ describe('workspace-project App', () => {
 
   it('should display welcome message', () => {
     page.navigateTo();
-    expect(page.getTitleText()).toEqual('Welcome to YouTubeClient!');
+    expect(page.getTitleText()).toEqual('Welcome to api-client!');
   });
 
   afterEach(async () => {

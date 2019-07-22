@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "YouTubeClient": {
+    "api-client": {
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/YouTubeClient",
+            "outputPath": "dist/api-client",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -23,6 +23,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -58,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "YouTubeClient:build"
+            "browserTarget": "api-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "YouTubeClient:build:production"
+              "browserTarget": "api-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "YouTubeClient:build"
+            "browserTarget": "api-client:build"
           }
         },
         "test": {
@@ -80,6 +81,7 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": [],
@@ -103,7 +105,7 @@
         }
       }
     },
-    "YouTubeClient-e2e": {
+    "api-client-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -112,11 +114,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "YouTubeClient:serve"
+            "devServerTarget": "api-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "YouTubeClient:serve:production"
+              "devServerTarget": "api-client:serve:production"
             }
           }
         },
@@ -132,5 +134,5 @@
       }
     }
   },
-  "defaultProject": "YouTubeClient"
+  "defaultProject": "api-client"
 }
